@@ -1,0 +1,27 @@
+{
+    "name": "ChatGPT + Gmail by Ashutosh Jha",
+    "version":"1.0.1",
+    "description": "This is an extension made by Ashutosh Jha to connect Gmail with ChatGPT",
+    "manifest_version": 3,
+    "author":"Ashutosh Jha ",
+    "action":{
+        "default_popup":"index.html"
+    },
+    "background":{
+        "service_worker":"background.js"
+    },
+    "content_scripts":[
+        {
+            "matches":["https://mail.google.com/*"],
+            "js":["gmail-script.js"]
+        },{
+            "matches":["https://chat.openai.com/*"],
+            "js":["gpt-script.js"]
+        }
+    ],
+    "host_permissions":[
+        "https://mail.google.com/*",
+        "https://chat.openai.com/*"
+    ]
+}
+

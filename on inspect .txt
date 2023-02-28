@@ -1,0 +1,5 @@
+window.onhashchange= function(){
+    if( window.location.hash.startsWith('#inbox/'))
+        console.log('I am now in an email: ' + 
+                    window.location.hash);
+    }
