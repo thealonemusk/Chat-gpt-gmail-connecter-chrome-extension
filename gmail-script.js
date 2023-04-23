@@ -12,8 +12,21 @@ window.onload = function () {
               chrome.runtime.sendMessage(email.textContent);
             });
           })();
+ catch (error) {
+              console.error(error);
+            }
+          };
+          
+          span.addEventListener('click', handleClick);
         }
       }
     }
   };
 };
+
+
+
+
+
+
+
